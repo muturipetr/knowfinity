@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home - My Portfolio{% endblock %}
+
+{% block content %}
+<section id="projects" class="container text-center mt-5 fade-in">
+    {% set repos = repos | default([]) %}
+    <div class="container mt-5">
+        <h2 class="text-center">Latest GitHub Projects</h2>
+        
+        <div class="row">
+            {% for repo in repos %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{ repo.owner.avatar_url }}" class="card-img-top" alt="Repo Image">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ repo.name }}</h5>
+                            <p class="card-text">{{ repo.description | default('No description provided.') }}</p>
+                            <a href="{{ repo.html_url }}" class="btn btn-primary" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

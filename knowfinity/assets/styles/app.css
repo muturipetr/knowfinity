@@ -1,0 +1,246 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: inherit;;
+    bottom: 0;
+    width: 100%;
+}
+
+.hero-section {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: justify;
+    color: white;
+    position: relative;
+}
+.hero-section .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+}
+.quick-links {
+    padding: 50px 0;
+}
+.links a {
+    margin: 10px;
+}
+
+.about-me {
+    columns: 2;
+    text-align: center;
+    padding: 50px 0;
+}
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.skills {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+.skills .skill {
+    margin-bottom: 20px;
+}
+.progress {
+    background: #ddd;
+    border-radius: 10px;
+    height: 25px;
+    width: 80%;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.progress-bar {
+    height: 100%;
+    background: #007bff;
+    text-align: center;
+    color: white;
+    line-height: 25px;
+}
+
+.contact {
+    text-align: center;
+    padding: 10px 0;
+}
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+}
+.social-links {
+    margin-top: 30px;
+}
+.social-links a {
+    margin: 10px;
+    font-size: 18px;
+}
+.resume-download {
+    margin-top: 30px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    }
+    header nav ul li {
+    margin: 0 10px;
+    }
+    header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    }
+    header nav ul li a i {
+    margin-right: 5px;
+    }
+    header nav ul li a:hover {
+    color: #ddd;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25D366;
+        color: white;
+        font-size: 24px;
+        padding: 12px;
+        border-radius: 50%;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+    }
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+    }
+
+    /* About Me Section */
+/* About Me Section */
+.about-me {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.about-me .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills Section */
+.skills {
+    margin-top: 30px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.progress {
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: #007bff;
+    height: 10px;
+    text-align: right;
+    color: white;
+    font-size: 12px;
+    padding-right: 5px;
+}
+
+/* Services Section */
+.services {
+    background: #f8f9fa;
+    padding: 50px 0;
+}
+
+.service-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+h3 {
+    color: #007bff;
+}
+
+.text-center .btn {
+    margin: 10px;
+}
+
+.btn.active {
+    background: #007bff;
+    color: white;
+}
+
+    .btn-success { background: #25D366; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; }

@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About Me | Peter Muturi{% endblock %}
+
+{% block content %}
+<section class="about-me">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="profile">
+                    <img src="{{ asset('images/hero.jpeg') }}" alt="Peter Muturi" class=" img-fluid rounded-circle">
+                </div>
+                <h1 class="mt-3">About Me</h1>
+                <p>
+                    I am <strong>Peter Muturi</strong>, a passionate and results-driven **ICT professional** with expertise in 
+                    **networking, system administration, and technical support**. With hands-on experience in **configuring and troubleshooting networks**, 
+                    **administering Active Directory domain services**, and **installing and maintaining IT systems**, I strive to enhance the efficiency 
+                    and security of IT infrastructures.
+                </p>
+                <p>
+                    I have practical skills in **computer network installation, maintenance, troubleshooting, and user support**.
+                </p>
+
+                <!-- Downloadable Resume -->
+                <a href="{{ asset('documents/CV_2025011708441098.pdf') }}" class="btn btn-primary" target="_blank">
+                    <i class="fas fa-download"></i> Download My Resume
+                </a>
+
+                <!-- Technical Skills Section -->
+                <section class="skills mt-5">
+                    <h2 class="text-center">Technical Skills & Expertise</h2>
+                    <div class="skill">
+                        <span>Networking & System Administration</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%;">85%</div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Technical Support & Troubleshooting</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 90%;">90%</div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Active Directory Management</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 80%;">80%</div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Problem Solving</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 95%;">95%</div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Teamwork & Decision Making</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 90%;">90%</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services">
+    <div class="container">
+        <h2 class="text-center mt-5" data-aos="fade-down">💼 Services I Offer</h2>
+        <div class="row">
+            {% set services = [
+                {'icon': '🌐', 'title': 'Web Development', 'category': 'development', 'description': 'Building dynamic web applications using Symfony, PHP, and modern technologies.'},
+                {'icon': '🖧', 'title': 'Networking & System Administration', 'category': 'it', 'description': 'Configuring, troubleshooting, and maintaining secure network systems.'},
+                {'icon': '🛠', 'title': 'IT Support & Troubleshooting', 'category': 'it', 'description': 'Providing expert technical support and diagnosing issues.'},
+                {'icon': '🔐', 'title': 'Cybersecurity & Data Protection', 'category': 'security', 'description': 'Implementing security measures to protect data and prevent threats.'},
+                {'icon': '☁️', 'title': 'Cloud Solutions & Virtualization', 'category': 'development', 'description': 'Deploying and managing cloud-based IT infrastructure.'}
+            ] %}
+            
+            <div class="text-center">
+                <button class="btn btn-secondary filter-btn" data-filter="all">All</button>
+                <button class="btn btn-secondary filter-btn" data-filter="development">Web Development</button>
+                <button class="btn btn-secondary filter-btn" data-filter="it">IT Support & Networking</button>
+                <button class="btn btn-secondary filter-btn" data-filter="security">Cybersecurity</button>
+            </div>
+
+            {% for service in services %}
+                <div class="col-md-4 text-center p-3 service-box" data-category="{{ service.category }}" data-aos="fade-up">
+                    <h3>{{ service.icon }} {{ service.title }}</h3>
+                    <p>{{ service.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

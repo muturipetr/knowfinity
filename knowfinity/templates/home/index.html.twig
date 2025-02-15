@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home | Peter Muturi - ICT Specialist{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="overlay">
+        <div class="hero-content">
+            <img src="{{ asset('images/profile.jpeg') }}" alt="Peter Muturi" class="profile-img">
+            <h1>Peter Muturi</h1>
+            <h2>ICT Specialist | Networking & System Administration</h2>
+            <p class="bio">
+                Passionate about ICT with hands-on experience in **networking, system administration, and technical support**. 
+                I specialize in **configuring and troubleshooting networks, Active Directory management, and IT system security**.
+            </p>
+            <a href="{{ path('app_projects') }}" class="btn btn-primary">
+                <i class="fas fa-briefcase portfolio-icon"></i> View My Work
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Links Section -->
+<section class="quick-links">
+    <div class="container">
+        <h3>Quick Links</h3>
+        <div class="links">
+            <a href="{{ asset('documents/CV_2025011708441098.pdf') }}" class="btn btn-outline-dark" target="_blank">
+                <i class="fas fa-file-download resume-icon"></i> Download Resume
+            </a>
+            <a href="{{ path('app_projects') }}" class="btn btn-outline-dark">
+                <i class="fas fa-briefcase portfolio-icon" style="color: rgba(0, 0, 0, 0.6);"></i> Projects
+            </a>
+            <a href="{{ path('app_contact') }}" class="btn btn-outline-dark">
+                <i class="fas fa-envelope contact-icon" style="color: #ffa500;"></i> Contact Me
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block styles %}
+<style>
+    /* Hero Section Styling */
+    .hero-section {
+        background: url("{{ asset('/profile.jpeg') }}") no-repeat center center fixed;
+        background-size: cover;
+        height: 85vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        position: relative;
+    }
+    .hero-section .overlay {
+        background: url("{{ asset('/hero.jpeg') }}") no-repeat center center fixed;
+        background-size: cover;
+        padding: 40px;
+        border-radius: 10px;
+    }
+    .hero-content {
+        max-width: 600px;
+    }
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #fff;
+        margin-bottom: 15px;
+    }
+    .bio {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .btn {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-transform: uppercase;
+        border-radius: 5px;
+    }
+    .btn i {
+        margin-right: 5px;
+    }
+    /* Quick Links Section */
+    .quick-links {
+        text-align: center;
+        padding: 50px 0;
+        background: #f8f9fa;
+    }
+    .links a {
+        margin: 10px;
+    }
+</style>
+{% endblock %}
